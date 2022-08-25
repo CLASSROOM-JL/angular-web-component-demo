@@ -2,7 +2,7 @@ import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {NewsInterface} from './interfaces/news.interface';
 
 @Component({
-  selector: 'app-root',
+  selector: 'app-root-news',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })

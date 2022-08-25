@@ -1,11 +1,30 @@
-div {
-  border: solid 1px #666;
+
+.news-articles{
+  border: solid 2px #d3d3d7;
   padding: 1rem;
   border-radius: 0.5rem;
   width: 25%;
-  margin: auto;
+  box-shadow: rgb(220 220 220 / 65%) 3px 3px 10px 5px;
+  margin: auto auto 15px auto;
 }
-a{
-  color: blue;
+.news-articles__title{
+  color: #065198 ;
+}
+.news-articles__description{
+  color: #333333;
+  font-size: 16px;
+  font-weight: 600;
+}
+.news-articles__actions{
+  display: flex;
+  justify-content: flex-end;
+}
+.news-articles__actions__btn{
+  color: white;
   cursor: pointer;
+  padding: 5px;
+  border-radius: 5px;
+  background: #0c5e9c;
+  display: flex;
+  align-items: center;
 }

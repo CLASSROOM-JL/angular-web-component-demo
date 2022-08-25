@@ -4,7 +4,7 @@ import {NewsReqInterface} from '../interfaces/news-req.interface';
 import {NewsInterface} from '../interfaces/news.interface';
 
 @Component({
-  selector: 'app-news',
+  selector: 'news-widget',
   templateUrl: './news.component.html',
   styleUrls: ['./news.component.css']
 })
@@ -16,6 +16,7 @@ export class NewsComponent implements OnInit , OnChanges {
   ngOnInit() {
 
     if (!this.articles.length) {
+      // @ts-ignore
       this.dataService.get().subscribe((data: NewsReqInterface) => {
         this.articles = !this.articles.length ? data.articles.map( a => a as NewsInterface) : this.articles;
         console.log(data);

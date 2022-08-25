@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import {HttpClient, HttpHeaders} from '@angular/common/http';
+import {environment} from "../environments/environment";
 
 @Injectable({
   providedIn: 'root'
@@ -11,6 +12,11 @@ export class DataService {
   constructor(private httpClient: HttpClient) { }
 
   get() {
-    return this.httpClient.get(`https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=${this.apiKey}`);
+    const options: any    = {
+      headers: new HttpHeaders({
+        'Access-Control-Allow-Origin': '*'
+      })
+    };
+    return this.httpClient.get(environment.base_endpoint);
   }
 }

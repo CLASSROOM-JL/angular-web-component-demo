@@ -1,9 +1,11 @@
-<div *ngFor="let article of articles">
-  <h2>{{article.title}}</h2>
+<div *ngFor="let article of articles" class="news-articles">
+  <h2 class="news-articles__title">{{article.title}}</h2>
 
-    <p>
+    <p class="news-articles__description">
       {{article.description}}
     </p>
-    <a (click)="readFullAction.emit(article)" >Read full article</a>
+  <div class="news-articles__actions">
+    <a class="news-articles__actions__btn" (click)="readFullAction.emit(article)" >Read full article</a>
+  </div>
 
 </div>

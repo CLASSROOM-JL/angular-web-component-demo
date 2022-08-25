@@ -4,8 +4,10 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
+    "start:ssl": "ng serve --port 4203 --host 0.0.0.0 --disable-host-check --ssl",
     "build": "ng build",
     "build:component": "ng build --prod --output-hashing none && node build-component.js",
+    "serve:elements": "http-server ./widget/ --port 3333 --cors",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"

@@ -11,12 +11,12 @@
 <body>
 
 <news-widget id="my-custom-element" ></news-widget>
-<!--<my-exported-custom-cmp></my-exported-custom-cmp>-->
-<script type="text/javascript" src="./news-widget.js"></script>
-<script type="text/javascript" src="./ng-custom-elements.js"></script>
+<my-exported-custom-cmp></my-exported-custom-cmp>
+<script type="text/javascript" src="news-widget.js"></script>
+<script type="text/javascript" src="ng-custom-elements.js"></script>
 
 <script>
-  const exampleData = JSON.stringify([{
+  const exampleData =[{
     "source": {
       "id": "EXAMPLE",
       "name": "EXAMPLE"
@@ -28,12 +28,13 @@
     "urlToImage": "https://techcrunch.com/wp-content/uploads/2022/07/GettyImages-1239009531.jpg?w=600",
     "publishedAt": "2022-08-23T18:23:48Z",
     "content": "Meta, formerly Facebook, has officially rolled out what it’s calling Meta accounts and Meta Horizon Profiles. The global launch will be gradual, but both accounts are to be used in place of the perso… [+2423 chars]"
-  }]);
+  }];
   function showSelection(data) {
     alert(`${data.detail.title} / ${data.detail.author}`);
   }
   const widget = document.querySelector("#my-custom-element");
-  // widget.setAttribute('articles',exampleData);
+  // widget.setAttribute('articles',exampleDataString);
+  widget.articles = exampleData;
   widget.addEventListener("readFullAction", (ev) => {
     console.log("Message received!", ev);
     showSelection(ev);

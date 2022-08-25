@@ -10,7 +10,7 @@ build = async () =>{
         './dist/angular-web-component/scripts.js',
         './dist/angular-web-component/main.js'
       ];
-    
+
       await fs.ensureDir('widget');
       await concat(files, 'widget/news-widget.js');
 }
